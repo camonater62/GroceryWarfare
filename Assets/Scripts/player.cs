@@ -7,11 +7,13 @@ public class player : MonoBehaviour
 {
     public float speed = 10;
     private Rigidbody rb;
-
+    public GameObject pc;
     private float movementX; // left/right arrow or A/D
     private float movementZ; // up/down arrow or W/S
     private float rotationX; // mouse X movement (left or right)
     private float rotationY; // mouse Y movement (front or back)
+
+    private Animator anim;
 
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked; // hide cursor when playing the game
+        anim = pc.GetComponent<Animator>();
     }
 
     // On<Action> functions are defined in the InputActions Asset
@@ -29,6 +32,7 @@ public class player : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementZ = movementVector.y;
+        anim.CrossFadeInFixedTime("RUN00_F", 0.1f);
     }
 
     private void OnLook(InputValue lookValue)
@@ -50,8 +54,11 @@ public class player : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0, movementZ);
         Debug.Log(movement);
         rb.AddRelativeForce(movement * speed); //Local space
-                                               //rb.AddForce(movement * speed); //World space
-                                               // transform.Translate(new Vector3(-movementY, 0.0f, movementX) * speed * Time.fixedDeltaTime);
+        Debug.Log(rb.velocity);
+        if(rb.velocity.z == 0 && rb.velocity.x == 0)
+        {
+            anim.CrossFadeInFixedTime("WAIT01", 0.1f);
+        } 
 
         Vector3 rotation = new Vector3(0, rotationX, 0);
         Quaternion deltaRotation = Quaternion.Euler(rotation * 10.0f * Time.fixedDeltaTime);
