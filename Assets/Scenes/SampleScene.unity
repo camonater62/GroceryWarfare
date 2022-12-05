@@ -612,6 +612,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &372894722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1764c797c376f684da04652345bad736, type: 3}
+  m_PrefabInstance: {fileID: 441513748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &420481864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
+--- !u!1 &598670986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+  m_PrefabInstance: {fileID: 1707128755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612094547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1318619597457586, guid: 4544a0659b11944ec9e0d388f27d9118, type: 3}
@@ -1376,6 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e06f5ce63c0f5b458af64e8aa6bd554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 5000
 --- !u!4 &920994921
 Transform:
   m_ObjectHideFlags: 0
@@ -2166,6 +2177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  pc: {fileID: 598670986}
+  cart: {fileID: 372894722}
+  prefab: {fileID: 5298321858286471124, guid: a50309dec1f5ff64db466c36b3284267, type: 3}
 --- !u!1 &1466927206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarManager : MonoBehaviour
 {
-
+    public float force = 5000f;
     private List<GameObject> cars = new();
     private float totalTime;
 
@@ -22,9 +22,9 @@ public class CarManager : MonoBehaviour
     {
         totalTime += Time.deltaTime;
         for (int i = 0; i < cars.Count; i++) {
-            float xcomp = 5000 * Time.deltaTime * Mathf.Sin(totalTime + 100 * i);
+            float xcomp = force * Time.deltaTime * Mathf.Sin(totalTime + 100 * i);
             float ycomp = 0;
-            float zcomp = 5000 * Time.deltaTime * Mathf.Cos(totalTime + 200 * i);
+            float zcomp = force * Time.deltaTime * Mathf.Cos(totalTime + 200 * i);
             Rigidbody body = cars[i].GetComponent<Rigidbody>();
             body.AddForce(xcomp, ycomp, zcomp);
 
