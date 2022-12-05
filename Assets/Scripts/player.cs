@@ -54,7 +54,7 @@ public class player : MonoBehaviour
                                                // transform.Translate(new Vector3(-movementY, 0.0f, movementX) * speed * Time.fixedDeltaTime);
 
         Vector3 rotation = new Vector3(0, rotationX, 0);
-        Quaternion deltaRotation = Quaternion.Euler(rotation * 10.0f * Time.fixedDeltaTime);
+        Quaternion deltaRotation = Quaternion.Euler(rotation * 50.0f * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
 
     }
