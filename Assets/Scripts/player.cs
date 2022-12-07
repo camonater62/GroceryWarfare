@@ -13,6 +13,7 @@ public class player : MonoBehaviour
     private float movementX; // left/right arrow or A/D
     private float movementZ; // up/down arrow or W/S
     private float rotationX; // mouse X movement (left or right)
+    private bool on_cooldown = false;
 
     private Animator anim;
 
@@ -45,7 +46,10 @@ public class player : MonoBehaviour
 
     private void OnFire(InputValue fireValue)
     {
-        StartCoroutine(LaunchCart());
+        if (!on_cooldown)
+        {
+            StartCoroutine(LaunchCart());
+        }
     }
 
     private void FixedUpdate()
@@ -65,10 +69,12 @@ public class player : MonoBehaviour
 
     IEnumerator LaunchCart()
     {
+        on_cooldown = true;
         var to_launch = Instantiate(prefab, cart.transform);
         var launch_rb = to_launch.GetComponent<Rigidbody>();
         launch_rb.AddExplosionForce(1000, pc.transform.position, 100);
-
+        yield return new WaitForSeconds(1);
+        on_cooldown = false;
         yield return new WaitForSeconds(2);
 
         Destroy(to_launch);
