@@ -18,10 +18,11 @@ public class CartCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
+
         if(other.tag != "ParticleIgnore")
         {
-            particles.Emit(20);
+            Debug.Log(other.name);
+            particles.Emit(30);
         }
     }
 }

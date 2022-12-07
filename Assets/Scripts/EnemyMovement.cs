@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
     private CapsuleCollider trigger;
     public GameObject player;
     private float speed;
+    public Text timer;
+    public float countdown = 90;
 
     void Start()
     {
@@ -31,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
+        countdown -= Time.deltaTime;
+        timer.text= countdown.ToString();
         if(Vector3.Distance(transform.position, player.transform.position) < 15f)
         {
             agent.destination = player.transform.position;
@@ -55,6 +60,8 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator GetHit()
     {
+        Animator anim = GameObject.Find("Casual1").GetComponent<Animator>();
+        anim.CrossFadeInFixedTime("DAMAGED00", 0.1f);
         agent.speed = 0f;
 
         yield return new WaitForSeconds(3);

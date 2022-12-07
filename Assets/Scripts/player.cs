@@ -74,6 +74,7 @@ public class player : MonoBehaviour
         var launch_rb = to_launch.GetComponent<Rigidbody>();
         launch_rb.AddExplosionForce(1000, pc.transform.position, 100);
         yield return new WaitForSeconds(1);
+
         on_cooldown = false;
         yield return new WaitForSeconds(2);
 
