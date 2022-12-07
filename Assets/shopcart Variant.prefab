@@ -4867,6 +4867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shopcart Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1764c797c376f684da04652345bad736, type: 3}
+      propertyPath: m_TagString
+      value: FlyingCart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1764c797c376f684da04652345bad736, type: 3}
 --- !u!4 &6180897260118510450 stripped
