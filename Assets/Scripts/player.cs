@@ -52,7 +52,6 @@ public class player : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, 0, movementZ);
         rb.AddRelativeForce(movement * speed); //Local space
-        Debug.Log(rb.velocity);
         if (rb.velocity.z == 0 && rb.velocity.x == 0)
         {
             anim.CrossFadeInFixedTime("WAIT01", 0.1f);
