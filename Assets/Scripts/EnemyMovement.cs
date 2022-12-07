@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
     private NavMeshAgent agent;
     public GameObject player;
     private float speed;
-    public ParticleSystem aura;
+    public GameObject aura;
     public GameObject GameOver;
 
     void Start()
@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(transform.position, player.transform.position) < 15f)
+        if (Vector3.Distance(transform.position, player.transform.position) < 15f)
         {
             agent.destination = player.transform.position;
         }
@@ -44,13 +44,12 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "FlyingCart")
+        if (other.tag == "FlyingCart")
         {
             StartCoroutine(GetHit());
         }
-        else if(other.name == "Player")
+        else if (other.name == "Player")
         {
-            Debug.Log("Game Over Bitch!");
             GameOver.SendMessage("Display", "lose");
         }
     }
@@ -59,12 +58,11 @@ public class EnemyMovement : MonoBehaviour
     {
         Animator anim = GameObject.Find("Casual1").GetComponent<Animator>();
         anim.CrossFadeInFixedTime("DAMAGED01", 0.1f);
-        aura.Pause();
         agent.speed = 0f;
-
+        aura.SetActive(false);
         yield return new WaitForSeconds(3);
-        aura.Play();
 
+        aura.SetActive(true);
         agent.speed = speed;
     }
 }

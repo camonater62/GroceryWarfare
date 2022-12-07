@@ -3869,6 +3869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3f674830402cc45bce805cf6493db7, type: 3}
+--- !u!1 &1052689604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5024009746357069194, guid: ec3f674830402cc45bce805cf6493db7, type: 3}
+  m_PrefabInstance: {fileID: 1052689603}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1053078430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6894,7 +6899,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696617002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.55, y: 0.477, z: -9.31}
+  m_LocalPosition: {x: -15.34, y: 0.477, z: 8.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6948,7 +6953,7 @@ MonoBehaviour:
   - {fileID: 153994010}
   - {fileID: 1604153874}
   player: {fileID: 1304806157}
-  aura: {fileID: 0}
+  aura: {fileID: 1052689604}
   GameOver: {fileID: 2095198134}
 --- !u!1001 &1707128755
 PrefabInstance:
@@ -7734,7 +7739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e4e971cf1fa9a743956dd6db870cb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 90
+  time: 60
 --- !u!1 &1805890138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 95bd754f2e97d9e479064ea75839757d, type: 3}
@@ -9160,7 +9165,7 @@ MonoBehaviour:
   panel: {fileID: 1204140416}
   win: {fileID: 1052685135}
   lose: {fileID: 1078409399}
-  timeTrigger: 90
+  timeTrigger: 60
 --- !u!114 &2095198136
 MonoBehaviour:
   m_ObjectHideFlags: 0
