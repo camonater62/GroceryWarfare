@@ -11,16 +11,13 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
-    private CapsuleCollider trigger;
     public GameObject player;
     private float speed;
-    public Text timer;
-    public float countdown = 90;
+    public ParticleSystem aura;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        trigger = GetComponents<CapsuleCollider>()[1];
         speed = agent.speed;
     }
 
@@ -34,8 +31,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        countdown -= Time.deltaTime;
-        timer.text= countdown.ToString();
         if(Vector3.Distance(transform.position, player.transform.position) < 15f)
         {
             agent.destination = player.transform.position;
@@ -61,10 +56,12 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator GetHit()
     {
         Animator anim = GameObject.Find("Casual1").GetComponent<Animator>();
-        anim.CrossFadeInFixedTime("DAMAGED00", 0.1f);
+        anim.CrossFadeInFixedTime("DAMAGED01", 0.1f);
+        aura.Pause();
         agent.speed = 0f;
 
         yield return new WaitForSeconds(3);
+        aura.Play();
 
         agent.speed = speed;
     }

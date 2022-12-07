@@ -22,7 +22,7 @@ public class CartCollision : MonoBehaviour
         if(other.tag != "ParticleIgnore")
         {
             Debug.Log(other.name);
-            particles.Emit(30);
+            particles.Play();
         }
     }
 }
