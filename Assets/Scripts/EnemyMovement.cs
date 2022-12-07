@@ -10,10 +10,12 @@ public class EnemyMovement : MonoBehaviour
     public Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    private CapsuleCollider trigger;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        trigger = GetComponents<CapsuleCollider>()[1];
     }
 
     void GotoNextPoint()
