@@ -16,14 +16,12 @@ public class CartCollision : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision.collider.gameObject.name);
-        if ((collision.collider.gameObject.name != "ParkingLot01") || collision.collider.gameObject.name != "ParkingLot01 (1)" || collision.collider.gameObject.name != "Player" ||
-            collision.collider.gameObject.name != "default") 
+        Debug.Log(other.tag);
+        if(other.tag != "ParticleIgnore")
         {
-            Debug.Log("hello");
-            particles.Play();
+            particles.Emit(20);
         }
     }
 }
