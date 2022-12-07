@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject player;
     private float speed;
     public ParticleSystem aura;
+    public GameObject GameOver;
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class EnemyMovement : MonoBehaviour
         else if(other.name == "Player")
         {
             Debug.Log("Game Over Bitch!");
+            GameOver.SendMessage("Display", "lose");
         }
     }
 
