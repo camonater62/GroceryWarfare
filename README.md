@@ -1,5 +1,5 @@
 # GroceryWarfare
-![Video]("./121 Grocery-1.mp4")
+![Video](./121 Grocery-1.mp4)
 In Grocery Warfare you must evade a solicitor as you exit from the supermarket all while cars are flying all over the place.
 
 # Base Scene Requirements
