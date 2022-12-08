@@ -9,14 +9,20 @@
 2. Cars
 3. Player character
 4. NPC character
-5. Light poles
+5. Light posts
 ### Controllable Character
 - Third-person perspective
 
 ## NPC Chase Scene
 ### At least one NPC
+- Anime girl that chases you if the player is within a certain range
+- Patrols the area of the player is outside of the range
 ### 2 Interactions with NPC
+- If the player collides with the NPC, the player loses
+- The player can shoot a shopping cart and stun the NPC
 ### Obstacles
+- There are many cars moving around the scene
+- There are trees and light posts scattered about
 
 ## Polished / Game Ready
 ### Interesting objects/materials
