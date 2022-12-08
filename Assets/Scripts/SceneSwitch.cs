@@ -18,10 +18,12 @@ public class SceneSwitch : MonoBehaviour
     }
 
     public void LoadMainScene() {
+        Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
     }
 
     public void LoadStartScene() {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Main Menu");
     }
 }
