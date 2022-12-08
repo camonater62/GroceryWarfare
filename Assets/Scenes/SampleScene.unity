@@ -2794,8 +2794,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.956306, y: 5.3144393, z: 2.8369026}
-  m_Center: {x: 0.041702807, y: 2.6472833, z: 0.09605491}
+  m_Size: {x: 2.5629876, y: 5.3144393, z: 2.8369026}
+  m_Center: {x: -0.65495646, y: 2.6472833, z: 0.09605491}
 --- !u!4 &648941021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
@@ -4562,8 +4562,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.956306, y: 5.3144393, z: 2.8369026}
-  m_Center: {x: 0.041702807, y: 2.6472833, z: 0.09605491}
+  m_Size: {x: 2.3871396, y: 5.3144393, z: 2.8369026}
+  m_Center: {x: -0.74288046, y: 2.6472833, z: 0.09605491}
 --- !u!4 &1172104546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405256, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
@@ -5527,7 +5527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304806157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: -8.9}
+  m_LocalPosition: {x: 0, y: 0.46, z: -7.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5678,8 +5678,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2414904, y: 5.3958144, z: 3.2386603}
-  m_Center: {x: -0.34729344, y: 2.7100756, z: -0.45656818}
+  m_Size: {x: 1.3347216, y: 5.3958144, z: 3.2386603}
+  m_Center: {x: 0.606091, y: 2.7100756, z: -0.45656824}
 --- !u!4 &1466927211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
@@ -8134,8 +8134,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2414904, y: 5.3958144, z: 3.2386603}
-  m_Center: {x: -0.34729344, y: 2.7100756, z: -0.45656818}
+  m_Size: {x: 1.549676, y: 5.3958144, z: 3.2386603}
+  m_Center: {x: 0.49861383, y: 2.7100756, z: -0.45656824}
 --- !u!4 &1876775532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
@@ -8765,8 +8765,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2414904, y: 5.3958144, z: 3.2386603}
-  m_Center: {x: -0.34729344, y: 2.7100756, z: -0.45656818}
+  m_Size: {x: 1.4942656, y: 5.3958144, z: 3.2386603}
+  m_Center: {x: 0.526319, y: 2.7100756, z: -0.45656824}
 --- !u!4 &2011535293 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481554, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
