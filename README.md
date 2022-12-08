@@ -1,6 +1,9 @@
 # GroceryWarfare
 In Grocery Warfare you must evade a solicitor as you exit from the supermarket all while cars are flying all over the place.
 
+### Video: https://github.com/camonater62/GroceryWarfare/raw/main/121%20Grocery-1.mp4
+### Download: https://github.com/camonater62/GroceryWarfare/raw/main/GroceryWarfareBuild.zip
+
 # Base Scene Requirements
 ## Particle System
 - "Super saiyan" effect around the NPC when active
